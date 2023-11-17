@@ -5,6 +5,8 @@ kubectl apply -k ./
 Full:
 https://www.rancher.cn/running-highly-available-wordpress-mysql-kubernetes
 
+wget https://github.com/pancyber/kube_training/archive/refs/heads/main.zip
+
 kubectl create -f storage-class.yaml
 
 kubectl create -f mysql-services.yaml
