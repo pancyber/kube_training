@@ -78,8 +78,8 @@ spec:
           mountPath: /etc/mysql/conf.d
         resources:
           requests:
-            cpu: 500m
-            memory: 1Gi
+            cpu: 100m
+            memory: 128Mi
         livenessProbe:
           exec:
             command: ["mysqladmin", "ping"]
@@ -164,4 +164,4 @@ spec:
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
-          storage: 10Gi
+          storage: 5Gi
