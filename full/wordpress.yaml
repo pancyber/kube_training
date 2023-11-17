@@ -34,7 +34,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: nfs
+  name: nfs-claim
 spec:
   accessModes:
     - ReadWriteMany
@@ -81,4 +81,4 @@ spec:
       volumes:
       - name: wordpress-persistent-storage
         persistentVolumeClaim:
-            claimName: nfs
+            claimName: nfs-claim
