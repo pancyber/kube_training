@@ -21,12 +21,12 @@ metadata:
   name: nfs
 spec:
   capacity:
-    storage: 20G
+    storage: 5G
   accessModes:
     - ReadWriteMany
   nfs:
     # FIXME: use the right IP
-    server: <IP of the NFS Service>
+    server: 10.108.8.108
     path: "/"
 
 ---
@@ -41,7 +41,7 @@ spec:
   storageClassName: ""
   resources:
     requests:
-      storage: 20G
+      storage: 5G
 
 ---
 
