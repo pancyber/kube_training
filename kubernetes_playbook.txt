@@ -1,0 +1,37 @@
+Simple:
+https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/
+kubectl apply -k ./
+
+Full:
+https://www.rancher.cn/running-highly-available-wordpress-mysql-kubernetes
+
+kubectl create -f storage-class.yaml
+
+kubectl create -f mysql-services.yaml
+
+kubectl create -f mysql-configmap.yaml
+
+kubectl create -f mysql-statefulset.yaml
+
+kubectl get pods
+kubectl get services
+
+kubectl create -f nfs.yaml
+
+kubectl describe services nfs-server  --> <get ip and replace in wordpress.yaml>
+
+kubectl create -f wordpress.yaml
+
+kubectl scale --replicas=<number of replicas> deployment/wordpress
+
+kubectl get services wordpress
+
+
+
+
+## play
+kubectl scale --replicas=1 deployment/wordpress
+
+kubectl scale statefulsets mysql --replicas=1
+
+kubectl get pods
